@@ -11,7 +11,7 @@ html, body {
 }
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    background-image: url(img/imge.jpg);
+    background-image: url(imge.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -584,4 +584,5 @@ body {
         align-items: flex-start;
         gap: 16px;
     }
+
 }
