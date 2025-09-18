@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="login-container">
+    <div class="login-card">
+      <div class="login-header">
+        <h2>Welcome to Computer Store</h2>
+        <p>Sign in to your account</p>
+      </div>
+
+      <form id="loginForm" class="login-form">
+        <!-- Email -->
+        <div class="form-group">
+          <div class="input-wrapper">
+            <input type="email" id="email" name="email" required placeholder="Email Address">
+            <label for="email">Email Address</label>
+            <span class="focus-border"></span>
+          </div>
+        </div>
+
+        <!-- Password -->
+        <div class="form-group">
+          <div class="input-wrapper password-wrapper">
+            <input type="password" id="password" name="password" required placeholder="Password">
+            <label for="password">Password</label>
+            <button type="button" class="password-toggle" id="passwordToggle">
+              <span class="eye-icon"></span>
+            </button>
+            <span class="focus-border"></span>
+          </div>
+        </div>
+
+        <!-- Options -->
+        <div class="form-options">
+          <label class="remember-wrapper">
+            <input type="checkbox" id="remember">
+            <span class="checkbox-label">
+              <span class="checkmark"></span>
+              Remember me
+            </span>
+          </label>
+          <a href="#" class="forgot-password">Forgot password?</a>
+        </div>
+
+        <!-- Submit -->
+        <button type="submit" class="login-btn btn">
+          <span class="btn-text">Sign In</span>
+          <span class="btn-loader"></span>
+        </button>
+      </form>
+
+      <!-- Divider -->
+      <div class="divider">
+        <span>or continue with</span>
+      </div>
+
+      <!-- Social -->
+      <div class="social-login">
+        <button type="button" class="social-btn google-btn">
+          <span class="social-icon google-icon"></span>
+          Google
+        </button>
+        <button type="button" class="social-btn github-btn">
+          <span class="social-icon github-icon"></span>
+          GitHub
+        </button>
+      </div>
+
+      <!-- Signup -->
+      <div class="signup-link">
+        <p>Don't have an account? <a href="#">Sign up</a></p>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
