@@ -36,39 +36,43 @@ document.addEventListener('aos:in', ({ detail }) => {
   swiper.update();
 });
 // ###################
-document.querySelectorAll(".addBtn").forEach(btn => {
-  btn.addEventListener("click", function(e) {
-    e.preventDefault();
-    Swal.fire({
-      icon: 'success',
-      title: 'Added to Cart',
-      text: 'The item has been added to your cart!',
-      showConfirmButton: false,
-      timer: 1500
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".addBtn").forEach(btn => {
+    btn.addEventListener("click", function(e) {
+      e.preventDefault();
+      Swal.fire({
+        icon: 'success',
+        title: 'Added to Cart',
+        text: 'The item has been added to your cart!',
+        showConfirmButton: false,
+        timer: 1500
+      });
+    });
+  });
+
+  document.querySelectorAll(".removeBtn").forEach(btn => {
+    btn.addEventListener("click", function(e) {
+      e.preventDefault();
+      Swal.fire({
+        title: 'Are you sure?',
+        text: "Do you really want to remove this item?",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#d33',
+        cancelButtonColor: '#3085d6',
+        confirmButtonText: 'Yes, remove it!'
+      }).then((result) => {
+        if (result.isConfirmed) {
+          Swal.fire(
+            'Removed!',
+            'The item has been removed from your cart.',
+            'success'
+          )
+        }
+      });
     });
   });
 });
 
-document.querySelectorAll(".removeBtn").forEach(btn => {
-  btn.addEventListener("click", function(e) {
-    e.preventDefault();
-    Swal.fire({
-      title: 'Are you sure?',
-      text: "Do you really want to remove this item?",
-      icon: 'warning',
-      showCancelButton: true,
-      confirmButtonColor: '#d33',
-      cancelButtonColor: '#3085d6',
-      confirmButtonText: 'Yes, remove it!'
-    }).then((result) => {
-      if (result.isConfirmed) {
-        Swal.fire(
-          'Removed!',
-          'The item has been removed from your cart.',
-          'success'
-        )
-      }
-    });
-  });
-});
+
 
