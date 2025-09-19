@@ -1,5 +1,5 @@
 document.getElementById("loginForm").addEventListener("submit", function (e) {
-  e.preventDefault();
+  e.preventDefault(); 
   let email = document.getElementById("email").value.trim();
   let password = document.getElementById("password").value.trim();
 
@@ -7,10 +7,11 @@ document.getElementById("loginForm").addEventListener("submit", function (e) {
     Swal.fire({
       position: "center",
       icon: "success",
-      title: "SignUp successful",
+      title: "Login successful",
       showConfirmButton: false,
       timer: 1500
     }).then(() => {
+
       window.location.href = "body.html";
     });
   } else {
@@ -25,6 +26,7 @@ document.getElementById("loginForm").addEventListener("submit", function (e) {
 
 const passwordInput = document.getElementById("password");
 const toggle = document.getElementById("passwordToggle");
+
 toggle.addEventListener("click", () => {
   const eyeIcon = toggle.querySelector(".eye-icon");
   if (passwordInput.type === "password") {
@@ -34,5 +36,4 @@ toggle.addEventListener("click", () => {
     passwordInput.type = "password";
     eyeIcon.classList.remove("show-password");
   }
-
 });
