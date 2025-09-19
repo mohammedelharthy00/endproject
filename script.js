@@ -11,7 +11,7 @@ document.getElementById("loginForm").addEventListener("submit", function (e) {
       showConfirmButton: false,
       timer: 1500
     }).then(() => {
-      window.location.href = "html/body.html";
+      window.location.href = "body.html";
     });
   } else {
     Swal.fire({
@@ -34,4 +34,5 @@ toggle.addEventListener("click", () => {
     passwordInput.type = "password";
     eyeIcon.classList.remove("show-password");
   }
+
 });
