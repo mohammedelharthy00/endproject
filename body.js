@@ -36,7 +36,8 @@ document.addEventListener('aos:in', ({ detail }) => {
   swiper.update();
 });
 // ###################
- document.getElementById(".addBtn").addEventListener("click", function(e) {
+document.querySelectorAll(".addBtn").forEach(btn => {
+  btn.addEventListener("click", function(e) {
     e.preventDefault();
     Swal.fire({
       icon: 'success',
@@ -46,9 +47,10 @@ document.addEventListener('aos:in', ({ detail }) => {
       timer: 1500
     });
   });
+});
 
-  // Remove with confirmation
-  document.getElementById(".removeBtn").addEventListener("click", function(e) {
+document.querySelectorAll(".removeBtn").forEach(btn => {
+  btn.addEventListener("click", function(e) {
     e.preventDefault();
     Swal.fire({
       title: 'Are you sure?',
@@ -66,6 +68,7 @@ document.addEventListener('aos:in', ({ detail }) => {
           'success'
         )
       }
-    })
-
+    });
   });
+});
+
